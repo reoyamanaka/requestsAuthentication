@@ -1,7 +1,7 @@
 import requests, math
 
 while True:
-    print("Choose what action to take:")
+    print("\nChoose what action to take:")
     print("1) Get")
     print("2) Post")    
     print("3) Test Basic Authentication")
