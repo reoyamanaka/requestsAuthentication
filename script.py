@@ -1,10 +1,11 @@
-import requests
+import requests, math
 
 while True:
     print("Choose what action to take:")
     print("1) Get")
     print("2) Post")    
     print("3) Test Basic Authentication")
+    print("4) Test the timeout duration of 3 seconds.")
 
     userInput = input()
     if userInput == "1":
@@ -38,4 +39,20 @@ while True:
         elif statusCode == 200:
             print("\nThe status code was {}. This is an OK response. You entered the correct credentials.\n".format(statusCode))
         break
+    
+    elif userInput == "4":
+        print("\nThe timeout threshold is 3 seconds. If you enter less than 3 seconds, the status code should be 200. Otherwise, a timeout exception should be raised.\n")
+        loadingTime = math.floor(float(input("Enter loading time: ")))
+        
+        try:
+            r = requests.get(f"https://httpbin.org/delay/{loadingTime}", timeout = 3)
+            print("The status code was 200. Everything is OK.\n")
+        except:
+            print("Connection timeout!\n")
+        break
+    else:
+        print("\nInvalid input.\n")
+        
+
+
          
