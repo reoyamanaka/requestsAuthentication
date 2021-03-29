@@ -15,4 +15,13 @@ while True:
         print(r.url+"\n")
         break
     
-    
+    elif userInput == "2":
+        username = input("Enter username: ")
+        password = input("Enter password: ")
+        payload = {"username": username, "password": password}
+        r = requests.post("https://httpbin.org/post", data=payload)
+        r_dict = r.json()
+        print("\nBased on your post submission, the posted form values are:\n")
+        print(r_dict["form"])
+        print()
+        break 
