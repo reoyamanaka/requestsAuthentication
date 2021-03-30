@@ -59,25 +59,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-### Testing GET request
-
-![](images/get.gif)
-
-### Testing POST request
-
-![](images/post.gif)
-
-### Testing POST request for authentication (with valid credentials)
-
-![](images/validAuth.gif)
-
-### Testing POST request for authentication (with invalid credentials)
-
-![](images/invalidAuth.gif)
-
-### Testing connection timeout
-
-![](images/timeout.gif)
+There are several ways you can employ Python's <b>request module</b> using this program.
+<ul>
+  <li>Standard GET request with two arbitrary parameters <i>page number</i> and <i>count</i></li>
+  <li>Standard POST request with two arbitrary parameters <i>username</i> and <i>password</i></li>
+  <li>Simulate server authentication using a POST request</li>
+  <li>Test connection timeout by simulating the loading time</li>
+</ul>
 
 ### Built With
 
