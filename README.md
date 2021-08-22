@@ -91,9 +91,9 @@ To get a local copy up and running follow these simple steps.
    ```sh
    git clone https://github.com/reoyamanaka/requestsAuthentication.git
    ```
-2. Install requests module
+2. Install requirements
    ```sh
-   pip3 install requests
+   pip3 install -r requirements.txt
    ```
 
 <!-- USAGE -->
